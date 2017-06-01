@@ -3,7 +3,7 @@
 
   //--- Traveler Object
   function Traveler(name_in) {
-    var amount = Math.floor(Math.random() * 75); //amount of food
+    var amount = Math.floor(Math.random() * 100); //amount of food
     var name = name_in; //traveler's name
     var healthy = true;
 
@@ -71,7 +71,7 @@
     //adding functionality
     this.isSomeoneSick = function() {
       for (let i = 0; i < passengers.length; i++) {
-        console.log(passengers[i].getName() + " healthy = " + passengers[i].getHealthy() );
+        // console.log(passengers[i].getName() + " healthy = " + passengers[i].getHealthy() );
         if (passengers[i].getHealthy() == false) {
           return true;
         }
@@ -99,7 +99,7 @@
   function hunt(traveler_in) {
     // console.log(traveler_in.getName() + " has " + traveler_in.getAmount() + " before hunting.");
     if (Math.floor(Math.random() >= .5)) {
-      traveler_in.setAmount(traveler_in.getAmount() * 2);
+      traveler_in.setAmount(traveler_in.getAmount() + 100);
     }
     // console.log(traveler_in.getName() + " has " + traveler_in.getAmount() + " after hunting.");
   } //end of hunt
